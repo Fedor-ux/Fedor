@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Application form for tenants</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+
+    <!--Main container-->
+    <div class="container">
+      <header>Registration Form</header>
+
+      <!--Main form-->
+      <div class="form-outer">
+        <form action="#">
+          <div class="page slide-page">
+            
+            <!--Basic Info form-->
+            <div class="field">
+              <button class="firstNext next">Next</button>
+            </div>
+
+            <div class="title">Basic Info</div>
+
+            <div class="field">
+              <div class="label">First Name</div>
+              <input type="text" id="fName">
+            </div>
+
+            <div class="field">
+              <div class="label" >Last Name</div>
+              <input type="text" id="lName">
+            </div>
+            <div class="field">
+                <div class="label">Date</div>
+                <input type="date" id="date">
+              </div>
+
+              <div class="field">
+              <div class="label">Gender</div>
+              <select id="gender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+          </div>
+          
+          <!--Contact form-->
+          <div class="page">
+
+            <div class="field btns">
+              <button class="prev-1 prev">Previous</button>
+              <button class="next-1 next">Next</button>
+            </div>
+
+            <div class="title">Contact and Salary</div>
+            <div class="field">
+              <div class="label">Email Address</div>
+              <input type="text" id="email">
+            </div>
+            <div class="field">
+              <div class="label">Phone Number</div>
+              <input type="Number" id="phone">
+            </div>
+
+            <!--Salary-->
+            <div class="salary-box">
+
+              <h3>Salary indication</h3>
+  
+              <div class="salary-option">
+  
+                <div class="salary">
+                  <input type="radio" id="check-salary0" name="salary" checked />
+                  <label for="check-salary0">0 - 1.000</label>
+                </div>
+  
+                <div class="salary">
+                  <input type="radio" id="check-salary1" name="salary" />
+                  <label for="check-salary1">1.000 - 2.000</label>
+                </div>
+  
+                <div class="salary">
+                  <input type="radio" id="check-salary2" name="salary" />
+                  <label for="check-salary2">2.000 - 3.000</label>
+                </div>
+                <div class="salary">
+                  <input type="radio" id="check-salary3" name="salary" />
+                  <label for="check-salary3">3.000 - 4.000</label>
+                </div>
+                <div class="salary">
+                  <input type="radio" id="check-salary4" name="salary" />
+                  <label for="check-salary4">More 4000</label>
+                </div>
+  
+              </div>
+            </div>
+            
+          </div>
+
+          <!--Address form-->
+          <div class="page">
+
+            <div class="field btns">
+              <button class="prev-2 prev">Previous</button>
+              <button onClick="giveMeResult()" class="next-2 next">Next</button>
+            </div>
+
+            <div class="title">Address</div>
+
+            <div class="field">
+              <div class="label">Enter street address</div>
+              <input type="text" id="address">
+            </div>
+
+            <div class="field">
+              <div class="label">City</div>
+              <input type="text" id="city">
+            </div>
+
+            <div class="field">
+              <div class="label">Country</div>
+              <select id="country">
+                <option>Austria</option>
+                  <option>Belgium</option>
+                  <option>Bulgaria</option>
+                  <option>Croatia</option>
+                  <option>Cyprus</option>
+                  <option>Czechia</option>
+                  <option>Denmark</option>
+                  <option>Estonia</option>
+                  <option>Finland</option>
+                  <option>France</option>
+                  <option>Germany</option>
+                  <option>Greece</option>
+                  <option>Hungary</option>
+                  <option>Ireland</option>
+                  <option>Italy</option>
+                  <option>Latvia</option>
+                  <option>Lithuania</option>
+                  <option>Luxembourg</option>
+                  <option>Malta</option>
+                  <option>Netherlands</option>
+                  <option>Poland</option>
+                  <option>Portugal</option>
+                  <option>Romania</option>
+                  <option>Slovakia</option>
+                  <option>Slovenia</option>
+                  <option>Spain</option>
+                  <option>Sweden</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <div class="label">City</div>
+              <input type="text" id="city">
+            </div>
+
+            <div class="field">
+              <div class="label">Postal code</div>
+              <input type="Number" id="postal">
+            </div>
+
+          </div> 
+
+          <!--Confirm form-->
+          <div class="page">
+            <div class="field btns">
+              <button class="prev-3 prev">Previous</button>
+              <button class="submit">Submit</button>
+            </div>
+            <div class="title" name="spetial">Confirmation</div>
+
+            <div class="label">First Name</div>
+            <span id="user2Name" name="spetial"></span>
+
+            <div class="label" name="spetial">Last Name</div>
+            <span id="user2LastName" name="spetial"></span>
+
+            <div class="label" name="spetial">Bithday</div>
+            <span id="user2dateBithd" name="spetial"></span>
+
+            <div class="label" name="spetial">Gender</div>
+            <span id="user2Gender" name="spetial"></span>
+
+            <div class="label" name="spetial">Email</div>
+            <span id="user2Email" name="spetial"></span>
+
+            <div class="label" name="spetial">Phone Number</div>
+            <span id="user2Number" name="spetial"></span>
+
+            <div class="label" name="spetial">Salary</div>
+            <span id="user2Salary" name="spetial"></span>
+
+            <div class="label" name="spetial">Address</div>
+            <span id="user2Street" name="spetial"></span>
+
+            <div class="label" name="spetial">City</div>
+            <span id="user2City" name="spetial"></span>
+
+            <div class="label" name="spetial">Country</div>
+            <span id="user2Country" name="spetial"></span>
+
+            <div class="label" name="spetial">Post Code</div>
+            <span id="user2Postal" name="spetial"></span>
+             
+
+          </div>
+        </form>
+      </div>
+
+      <!--Progress bar-->
+      <div class="progress-bar">
+
+        <div class="step">
+          <p>Basic</p>
+          <div class="bullet">
+            <span>1</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+
+        <div class="step">
+          <p>Contact</p>
+          <div class="bullet">
+            <span>2</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+
+        <div class="step">
+          <p>Address</p>
+          <div class="bullet">
+            <span>3</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div> 
+
+        <div class="step">
+          <p>Submit</p>
+          <div class="bullet">
+            <span>4</span>
+          </div>
+        
+          <div class="check fas fa-check"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
